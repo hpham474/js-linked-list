@@ -53,7 +53,18 @@ class LinkedList {
         }
         return current;
     }
-    at(index) {}
+    at(index) {
+        if(index < 0 || index > this.size()) {
+            return -1;
+        }
+        let pos = 0;
+        let current = this.list;
+        while(current !== null && pos < index) {
+            current = current.nextNode;
+            pos++;
+        }
+        return current;
+    }
     pop() {}
     contains(value) {}
     find(value) {}

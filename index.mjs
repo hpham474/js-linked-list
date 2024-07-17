@@ -12,5 +12,7 @@ list.append(node3);
 list.prepend(node4);
 
 console.log(list.toString());
-console.log(list.head());
-console.log(list.tail());
+console.log(list.at(0));
+console.log(list.at(3));
+console.log(list.at(-1));
+console.log(list.at(7));
