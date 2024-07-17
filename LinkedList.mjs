@@ -43,8 +43,16 @@ class LinkedList {
         }
         return size;
     }
-    head() {}
-    tail() {}
+    head() {
+        return this.list;
+    }
+    tail() {
+        let current = this.list;
+        while(current.nextNode !== null) {
+            current = current.nextNode;
+        }
+        return current;
+    }
     at(index) {}
     pop() {}
     contains(value) {}

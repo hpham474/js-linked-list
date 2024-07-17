@@ -11,6 +11,6 @@ list.append(node2);
 list.append(node3);
 list.prepend(node4);
 
-console.log(list);
 console.log(list.toString());
-console.log(list.size());
+console.log(list.head());
+console.log(list.tail());
