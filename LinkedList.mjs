@@ -1,7 +1,20 @@
 class LinkedList {
     list;
-    constructor() {}
-    prepend() {}
+    constructor() {
+        this.list = null;
+    }
+    append(value) {
+        if (this.list === null) {
+            this.list = value;
+        } else {
+            let current = this.list;
+            while(current.nextNode !== null) {
+                current = current.nextNode;
+            }
+            current.nextNode = value;
+        }
+    }
+    prepend(value) {}
     size() {}
     head() {}
     tail() {}
@@ -13,3 +26,5 @@ class LinkedList {
     removeAt(index) {}
     toString() {}
 }
+
+export default LinkedList;

@@ -18,3 +18,5 @@ class Node {
         this.nextNode = node;
     }
 }
+
+export default Node;
