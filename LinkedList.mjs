@@ -7,8 +7,8 @@ class LinkedList {
     }
     append(value) {
         const node = new Node();
-        
         node.value = value;
+
         if (this.list === null) {
             this.list = node;
         } else {
@@ -19,7 +19,17 @@ class LinkedList {
             current.nextNode = node;
         }
     }
-    prepend(value) {}
+    prepend(value) {
+        const node = new Node();
+        node.value = value;
+
+        if (this.list === null) {
+            this.list = node;
+        } else {
+            node.nextNode = this.list;
+            this.list = node;
+        }
+    }
     size() {}
     head() {}
     tail() {}
