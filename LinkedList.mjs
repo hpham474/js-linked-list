@@ -94,8 +94,6 @@ class LinkedList {
         }
         return null;
     }
-    insertAt(value, index) {}
-    removeAt(index) {}
     toString() {
         let current = this.list;
         let string = "";
