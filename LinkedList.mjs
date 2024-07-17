@@ -55,7 +55,7 @@ class LinkedList {
     }
     at(index) {
         if(index < 0 || index > this.size()) {
-            return -1;
+            return null;
         }
         let pos = 0;
         let current = this.list;
@@ -65,7 +65,13 @@ class LinkedList {
         }
         return current;
     }
-    pop() {}
+    pop() {
+        let current = this.list;
+        while(current.nextNode.nextNode !== null) {
+            current = current.nextNode;
+        }
+        current.nextNode = null;
+    }
     contains(value) {}
     find(value) {}
     insertAt(value, index) {}
