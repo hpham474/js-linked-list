@@ -13,3 +13,4 @@ list.append(node3);
 list.prepend(node4);
 
 console.log(list);
+list.toString();

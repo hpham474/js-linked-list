@@ -39,7 +39,16 @@ class LinkedList {
     find(value) {}
     insertAt(value, index) {}
     removeAt(index) {}
-    toString() {}
+    toString() {
+        let current = this.list;
+        let string = "";
+        while (current !== null) {
+            string += `( ${current.value} ) -> `;
+            current = current.nextNode;
+        }
+        string += "null ";
+        console.log(string);    
+    }
 }
 
 export default LinkedList;
