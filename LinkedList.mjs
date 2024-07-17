@@ -1,17 +1,22 @@
+import Node from "./Node.mjs";
+
 class LinkedList {
     list;
     constructor() {
         this.list = null;
     }
     append(value) {
+        const node = new Node();
+        
+        node.value = value;
         if (this.list === null) {
-            this.list = value;
+            this.list = node;
         } else {
             let current = this.list;
             while(current.nextNode !== null) {
                 current = current.nextNode;
             }
-            current.nextNode = value;
+            current.nextNode = node;
         }
     }
     prepend(value) {}
