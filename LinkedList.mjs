@@ -30,7 +30,19 @@ class LinkedList {
             this.list = node;
         }
     }
-    size() {}
+    size() {
+        let size = 0;
+        if (this.list === null) {
+            return size;
+        } else {
+            let current = this.list;
+            while (current !== null) {
+                current = current.nextNode;
+                size++;
+            }
+        }
+        return size;
+    }
     head() {}
     tail() {}
     at(index) {}

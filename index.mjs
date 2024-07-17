@@ -13,3 +13,4 @@ list.prepend(node4);
 
 console.log(list);
 console.log(list.toString());
+console.log(list.size());
