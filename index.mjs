@@ -1,5 +1,4 @@
 import LinkedList from "./LinkedList.mjs";
-import Node from "./Node.mjs";
 
 const list = new LinkedList();
 const node1 = "one";
@@ -13,4 +12,4 @@ list.append(node3);
 list.prepend(node4);
 
 console.log(list);
-list.toString();
+console.log(list.toString());

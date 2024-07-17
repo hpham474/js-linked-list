@@ -47,7 +47,7 @@ class LinkedList {
             current = current.nextNode;
         }
         string += "null ";
-        console.log(string);    
+        return string;
     }
 }
 
