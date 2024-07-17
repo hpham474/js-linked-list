@@ -72,7 +72,16 @@ class LinkedList {
         }
         current.nextNode = null;
     }
-    contains(value) {}
+    contains(value) {
+        let current = this.list;
+        while(current !== null) {
+            if (current.value === value) {
+                return true;
+            }
+            current = current.nextNode;
+        }
+        return false;
+    }
     find(value) {}
     insertAt(value, index) {}
     removeAt(index) {}
