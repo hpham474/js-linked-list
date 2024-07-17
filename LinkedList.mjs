@@ -82,7 +82,18 @@ class LinkedList {
         }
         return false;
     }
-    find(value) {}
+    find(value) {
+        let current = this.list;
+        let pos = 0;
+        while(current !== null) {
+            if (current.value === value) {
+                return pos;
+            }
+            pos++;
+            current = current.nextNode;
+        }
+        return null;
+    }
     insertAt(value, index) {}
     removeAt(index) {}
     toString() {

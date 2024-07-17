@@ -12,7 +12,7 @@ list.append(node3);
 list.prepend(node4);
 
 console.log(list.toString());
-console.log(list.contains("four"));
-console.log(list.contains("two"));
-console.log(list.contains("three"));
-console.log(list.contains("five"));
+console.log(list.find("four"));
+console.log(list.find("two"));
+console.log(list.find("three"));
+console.log(list.find("five"));
