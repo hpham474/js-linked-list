@@ -10,7 +10,3 @@ list.append("snake");
 list.append("turtle");
 
 console.log(list.toString());
-
-list.insertAt("puppy", 1);
-
-console.log(list.toString());

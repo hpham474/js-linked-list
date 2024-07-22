@@ -96,12 +96,12 @@ class LinkedList {
   }
   insertAt(value, index) {
     if (index === 0) {
-        this.prepend(value);
-        return;
+      this.prepend(value);
+      return;
     }
     if (index === this.size()) {
-        this.append(value);
-        return;
+      this.append(value);
+      return;
     }
 
     const node = new Node();
@@ -109,25 +109,35 @@ class LinkedList {
     let current = this.list;
     let pos = 0;
     while (current.nextNode !== null) {
-        if (pos === index - 1) {
-            node.nextNode = current.nextNode;
-            current.nextNode = node;
-        }
-        pos++;
-        current = current.nextNode;
+      if (pos === index - 1) {
+        node.nextNode = current.nextNode;
+        current.nextNode = node;
+      }
+      pos++;
+      current = current.nextNode;
     }
   }
-//   removeAt(index) {
-//     let current = this.list;
-//     let pos = 0;
-//     while (current !== null) {
-//         if (pos === index) {
-//             let right = current.nextNode;
-//         }
-//         pos++;
-//         current = current.nextNode;
-//     }
-//   }
+  removeAt(index) {
+    if (index === 0) {
+      this.list = this.list.nextNode;
+      return;
+    }
+    if (index === this.size()) {
+      this.pop();
+      return;
+    }
+
+    let current = this.list;
+    let pos = 0;
+    while (current.nextNode !== null) {
+      if (pos === index - 1) {
+        current.nextNode = current.nextNode.nextNode;
+        
+      }
+      pos++;
+      current = current.nextNode;
+    }
+  }
   toString() {
     let current = this.list;
     let string = "";
