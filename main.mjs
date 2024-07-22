@@ -11,14 +11,6 @@ list.append("turtle");
 
 console.log(list.toString());
 
-list.insertAt("dolphin", 3);
+list.insertAt("puppy", 1);
 
 console.log(list.toString());
-
-// list.insertAt("whale", 0);
-
-// console.log(list.toString());
-
-// list.insertAt("octopus", 6);
-
-// console.log(list.toString());
